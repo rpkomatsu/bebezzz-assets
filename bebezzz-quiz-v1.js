@@ -206,6 +206,16 @@ fbq('track', 'PageView');
     if(pw) pw.style.display = (s.type === "intro") ? "none" : "";
 
     if(s.type === "intro"){
+      // FIX LCP/CLS: a tela intro pode já vir pré-renderizada no HTML estático da página.
+      // Detecção: idx===0 E já existe #btnMain dentro do #screenHost (screenHost nasce vazio
+      // numa carga normal; só o pré-render coloca o botão lá). Se for o caso, NÃO reconstruímos
+      // via innerHTML — só amarramos o clique no botão que já está na tela.
+      var preBtn = host.querySelector("#btnMain");
+      if(idx === 0 && preBtn){
+        host.removeAttribute("data-prerendered");
+        preBtn.onclick = next;
+        return;
+      }
       html += '<h1 style="text-align:center;color:#332728;font-size:22px;">Test de 1 minuto: descubre cómo enseñar a tu bebé a <span style="color:#D23B3B;">dormir toda la noche</span> en 3 días o menos</h1>';
       html += '<div class="sub" style="text-align:center;font-weight:700;color:#353E49;">De forma Gentil con la <span class="accent" style="color:var(--rose);font-weight:700;">' + TECHNIQUE + '</span></div>';
       html += '<img src="https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/hero-antes-depois-1.webp" width="720" height="405" alt="Antes y después: mamá cansada de noche y mamá tranquila con bebé dormido" style="width:100%;height:auto;display:block;border-radius:16px;margin:4px 0 14px;box-shadow:var(--shadow);">';
