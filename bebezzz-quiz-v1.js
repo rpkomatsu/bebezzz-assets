@@ -208,7 +208,7 @@ fbq('track', 'PageView');
     if(s.type === "intro"){
       html += '<h1 style="text-align:center;color:#332728;font-size:22px;">Test de 1 minuto: descubre cómo enseñar a tu bebé a <span style="color:#D23B3B;">dormir toda la noche</span> en 3 días o menos</h1>';
       html += '<div class="sub" style="text-align:center;font-weight:700;color:#353E49;">De forma Gentil con la <span class="accent" style="color:var(--rose);font-weight:700;">' + TECHNIQUE + '</span></div>';
-      html += '<img src="hero-antes-depois.webp" alt="Antes y después: mamá cansada de noche y mamá tranquila con bebé dormido" style="width:100%;height:auto;display:block;border-radius:16px;margin:4px 0 14px;box-shadow:var(--shadow);">';
+      html += '<img src="https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/hero-antes-depois-1.webp" alt="Antes y después: mamá cansada de noche y mamá tranquila con bebé dormido" style="width:100%;height:auto;display:block;border-radius:16px;margin:4px 0 14px;box-shadow:var(--shadow);">';
       html += '<div class="badge" style="background-color:#FFDD00;color:#000000;font-weight:600;text-align:center;border-radius:105px;width:300px;margin:10px auto 6px;">4 tests personalizados disponibles para hoy</div>';
       html += '<div class="hint" style="font-weight:500;">Haz clic en el botón de abajo para comenzar</div>';
       html += '<div class="social" style="font-weight:500;">Más de <b style="color:#34373B;">32.420</b> madres ya lo hicieron</div>';
@@ -346,7 +346,7 @@ fbq('track', 'PageView');
 
     if(s.type === "reveal1"){
       html += '<div style="font-size:20px;text-align:center;font-weight:600;color:#000000;margin-bottom:14px;">Mira por qué está pasando esto...</div>';
-      html += '<img src="que-paso.webp" alt="Qué pasó: tu bebé creó una asociación de sueño" style="width:100%;height:auto;display:block;border-radius:16px;margin:0 0 18px;">';
+      html += '<img src="https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/que-paso-2.webp" alt="Qué pasó: tu bebé creó una asociación de sueño" style="width:100%;height:auto;display:block;border-radius:16px;margin:0 0 18px;">';
       html += '<div class="reveal-line" style="background:none;border:none;box-shadow:none;padding:8px 2px;"><span class="ic">❌</span><span>Esto no significa que tenga hambre.</span></div>';
       html += '<div class="reveal-line" style="background:none;border:none;box-shadow:none;padding:8px 2px;"><span class="ic">❌</span><span>Esto no significa que hiciste algo mal.</span></div>';
       html += '<div class="reveal-line" style="background:none;border:none;box-shadow:none;padding:8px 2px;"><span class="ic">✅</span><span>Significa que es la única forma que conoce para relajarse y dormir.</span></div>';
@@ -377,7 +377,7 @@ fbq('track', 'PageView');
     if(s.type === "transition"){
       html += "<h1>💬 Mira lo que pasa en solo 3 días:</h1>";
       html += '<div class="tcarousel"><div class="tviewport" id="tvp"><div class="tslides" id="tslides">' +
-        ["depoimento1.webp","depoimento2.webp","depoimento3.webp","depoimento4.webp"].map(function(src,i){
+        ["https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/depoimento1-3.webp","https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/depoimento2-4.webp","https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/depoimento3-5.webp","https://media.atomicatmedia.net/u/UeNbQcRfGbNnB5JpINwanVc01eP2/Pictures/mcp/wRAY/depoimento4-6.webp"].map(function(src,i){
           return '<div class="tslide"><img src="'+src+'" alt="Depoimento '+(i+1)+'" draggable="false"></div>';
         }).join("") +
         '</div></div>' +
