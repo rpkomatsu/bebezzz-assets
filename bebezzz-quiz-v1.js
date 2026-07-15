@@ -1,4 +1,5 @@
-/* Meta Pixel - BebeZzz */
+/* Meta Pixel - BebeZzz (adiado pra depois do load, reduz contenção de thread no LCP) */
+function __loadMetaPixel(){
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -9,6 +10,9 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2014631956086086');
 fbq('track', 'PageView');
+}
+if(document.readyState === 'complete'){ __loadMetaPixel(); }
+else { window.addEventListener('load', __loadMetaPixel); }
 
 (function(){
   "use strict";
